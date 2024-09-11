@@ -1,0 +1,28 @@
+.tabs {
+    display: flex;
+    gap: 8px;
+    max-width: 100%;
+    overflow: overlay;
+    padding: 0 8px;
+    margin: 12px 0;
+}
+
+.tabs__item {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-light);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: var(--black-color);
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+.tabs__item_active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}

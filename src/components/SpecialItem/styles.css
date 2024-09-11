@@ -1,0 +1,36 @@
+.special-item {
+    min-width: 300px;
+    max-width: 300px;
+    height: 160px;
+    border-radius: 8px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.special-item_light {
+    color: var(--white-color);
+}
+
+.special-item_dark {
+    color: var(--black-color);
+}
+
+.special-item__header {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: inherit;
+}
+
+.special-item__description {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: inherit;
+}

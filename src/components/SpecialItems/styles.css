@@ -1,0 +1,7 @@
+.special-items {
+    display: flex;
+    gap: 8px;
+    max-width: 100%;
+    overflow: overlay;
+    padding: 0 8px;;
+}
