@@ -1,0 +1,7 @@
+.catalog {
+    padding: 12px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../../assets/CatalogPage_background.png') repeat;
+  }

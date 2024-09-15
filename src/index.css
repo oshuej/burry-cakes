@@ -14,8 +14,10 @@ code {
 
 :root {
   --white-color: rgba(255, 255, 255, 1);
+  --white-background-color: rgba(255, 255, 255, 0.3);
   --black-color: rgba(0, 0, 0, 1);
   --grey-dark: rgba(75, 75, 75, 1);
+  --grey-medium: rgba(154, 155, 161, 1);
   --grey-light: rgba(235, 235, 235, 1);
   --primary-color: rgba(198, 212, 176, 1);
   --secondary-color: rgba(235, 205, 214, 1);

@@ -1,0 +1,107 @@
+.catalog-item-page {
+    padding: 0 10px 100px;
+    position: relative;
+    min-height: calc(100vh - 100px);
+    background: url(../../assets//CatalogItemPage_background.png) repeat;
+}
+
+.catalog-item-page img {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+}
+
+.catalog-item-page__info {
+    margin-top: 10px;
+}
+
+.catalog-item-page__info-name {
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    margin: 0 0 4px 0;
+}
+
+.catalog-item-page__info-weight {
+    color: var(--grey-medium);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.catalog-item-page__info-description {
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.catalog-item-page__info-structure {
+    color: var(--grey-dark);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;   
+}
+
+.item-structure {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-structure__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-structure__column-value {
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.item-structure__column-name {
+    color: var(--grey-dark);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.catalog-item-page__add {
+    position: absolute;
+    outline: none;
+    border: none;
+    bottom: 30px;
+    width: calc(100% - 20px);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+}
+
+.catalog-item-page__add-text {
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.catalog-item-page__add-price {
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
