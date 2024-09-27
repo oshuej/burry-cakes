@@ -1,11 +1,10 @@
 import React from 'react';
+import sprite from '../assets/sprite.svg';
 
 export const Icon = ({ name, color = 'currentColor', size = 24 }) => {
     return (
-      <>
-        <svg width={size} height={size} fill={color}>
-          <use href={`/icons/sprite.svg#${name}`} />
+        <svg width={size} height={size} fill="none" stroke={color}>
+          <use href={`${sprite}#${name}`} />
         </svg>
-      </>
     )
   }

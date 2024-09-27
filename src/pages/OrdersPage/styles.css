@@ -1,0 +1,132 @@
+.orders-page__title {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 16px 0 16px 16px;
+}
+
+.orders-page__block-title {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0 0 16px 16px;
+}
+
+.orders-page__order {
+    padding: 16px;
+    border-top: 1px solid var(--grey-light);
+    display: flex;
+    justify-content: space-between;
+}
+
+.orders-page__order:last-child {
+    border-bottom: 1px solid var(--grey-light);
+    margin-bottom: 16px;
+}
+
+.orders-page__order-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.orders-page__order-date {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.orders-page__order-id {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    color: var(--grey-dark);
+    text-align: left;
+}
+
+.orders-page__order-status {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.orders-page__order-status .status {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.orders-page__order-status_rejected .status {
+    background-color: var(--secondary-color);
+}
+
+.status__text {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: left;
+    color: var(--grey-dark);
+}
+
+.status__cost {
+    margin-left: 16px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: left;
+    position: relative;
+}
+
+.status__cost::before {
+    content: '.';
+    position: absolute;
+    top: -25%;
+    left: -10px;
+}
+
+.orders-page__order-address {
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: left;
+}
+
+.orders-page__order-points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.orders-page__order-points_spent {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.orders-page__order-points_received {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+

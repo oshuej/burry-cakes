@@ -1,0 +1,137 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px 8px;
+}
+
+.header__image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu {
+    width: 30px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.header__backlink {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+}
+
+.header__backlink span {
+    margin-left: 4px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.2em;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.header__points {
+    justify-self: end;
+    width: fit-content;
+    padding: 6px 14px;
+    outline: none;
+    border: none;
+    background: var(--black-color);
+    border-radius: 8px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.header__points span {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.sidebar-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: var(--white-background-color);
+}
+
+.sidebar {
+    height: calc(100% - 72px);
+    width: 70%;
+    background: url('../../assets//Sidebar_background.png') repeat, var(--white-color);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 8px 56px 8px;
+    align-items: flex-start;
+}
+
+.sidebar__close {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 8px;
+}
+
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 24px;
+    flex-grow: 1;
+    margin-top: 56px;
+}
+
+.sidebar__menu-item {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    text-decoration: none;
+}
+
+.sidebar__menu-item span {
+    margin-left: 16px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.sidebar__footer {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar__footer-social {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.sidebar__footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+}
+
+.sidebar__footer-address {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 1.3em;
+    font-weight: 400px;
+}

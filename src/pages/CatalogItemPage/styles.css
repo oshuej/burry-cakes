@@ -5,7 +5,7 @@
     background: url(../../assets//CatalogItemPage_background.png) repeat;
 }
 
-.catalog-item-page img {
+.catalog-item-page__image {
     width: calc(100% + 20px);
     margin-left: -10px;
 }

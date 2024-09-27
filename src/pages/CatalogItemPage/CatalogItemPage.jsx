@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
+import Header from '../../components/Header/Header';
 
 const CatalogItemPage = () => {
     const item = {
@@ -19,7 +20,8 @@ const CatalogItemPage = () => {
 
     return (
         <div className='catalog-item-page'>
-            <img src={item.image} alt={item.name} />
+            <Header backLink={'/catalog'} backText={'Каталог'} />
+            <img src={item.image} alt={item.name} className='catalog-item-page__image'/>
             <div className='catalog-item-page__info'>
                 <h2 className='catalog-item-page__info-name'>{item.name}</h2>
                 <span className='catalog-item-page__info-weight'>{item.structure.weight}&nbsp;гр</span>

@@ -3,5 +3,8 @@
     gap: 12px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog-page {
     background: url('../../assets/CatalogPage_background.png') repeat;
   }

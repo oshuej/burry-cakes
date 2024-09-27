@@ -1,0 +1,117 @@
+.bonuses-page__pattern {
+    height: 180px;
+    background: url('../../assets/BonusesPage_background.png') no-repeat;
+}
+
+.bonuses-page__qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bonuses-page__qr p {
+    text-align: center;
+    color: var(--grey-dark);
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: center;
+
+}
+
+.bonuses-page__history {
+    margin: 16px 0 16px 16px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+
+.bonuses-page__block-title {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: left;
+    margin-left: 16px;
+}
+
+.bonuses-page__order {
+    padding: 16px;
+    border-top: 1px solid var(--grey-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bonuses-page__order:last-child {
+    border-bottom: 1px solid var(--grey-light);
+    margin-bottom: 16px;
+}
+
+.bonuses-page__order-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bonuses-page__order-id {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: left;
+}
+
+.bonuses-page__cost {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3em;
+    text-align: left;
+    margin-left: 12px;
+    position: relative;
+}
+
+.bonuses-page__cost::before {
+    content: '.';
+    position: absolute;
+    left: -7px;
+    top: -25%;
+}
+
+.bonuses-page__order-date {
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: left;
+    color: var(--grey-dark);
+}
+
+.bonuses-page__order-points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.bonuses-page__order-points_spent {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.bonuses-page__order-points_received {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
