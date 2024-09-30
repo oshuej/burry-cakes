@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './styles.css';
 import Header from '../../components/Header/Header';
 import { Icon } from '../../components/IconComponent';
+import { Link } from 'react-router-dom';
 
 const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
@@ -120,7 +121,7 @@ const OrdersPage = () => {
                         {el}
                     </h3>
                     {orders[el].map((order) => (
-                        <div key={order.number} className='orders-page__order'>
+                        <Link key={order.number} className='orders-page__order' to={`/orders/${order.number}`}>
                             <div className='orders-page__order-info'>
                                 <span className='orders-page__order-date'>
                                     {getDateString(order.date)}
@@ -141,7 +142,7 @@ const OrdersPage = () => {
                                     </span>
                                 }
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>)} ) }
         </div>

@@ -3,6 +3,8 @@ import CatalogPage from "../pages/CatalogPage/CatalogPage";
 import CatalogItemPage from "../pages/CatalogItemPage/CatalogItemPage";
 import OrdersPage from "../pages/OrdersPage/OrdersPage";
 import BonusesPage from "../pages/BonusesPage/BonusesPage";
+import OrdersItemPage from "../pages/OrderItemPage/OrderItemPage";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
   const router = createBrowserRouter([
     {
@@ -25,6 +27,14 @@ import BonusesPage from "../pages/BonusesPage/BonusesPage";
     {
       path: '/bonuses',
       element: <BonusesPage />
+    },
+    {
+      path: '/orders/:orderID',
+      element: <OrdersItemPage />
+    },
+    {
+      path: '/profile',
+      element: <ProfilePage />
     }
   ]);
 

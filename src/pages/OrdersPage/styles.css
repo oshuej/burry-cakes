@@ -21,6 +21,7 @@
     border-top: 1px solid var(--grey-light);
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .orders-page__order:last-child {
@@ -40,6 +41,7 @@
     font-weight: 600;
     line-height: 1.2em;
     text-align: left;
+    color: var(--black-color);
 }
 
 .orders-page__order-id {
@@ -89,6 +91,7 @@
     line-height: 1.3em;
     text-align: left;
     position: relative;
+    color: var(--black-color);
 }
 
 .status__cost::before {
@@ -104,6 +107,7 @@
     font-weight: 400;
     line-height: 1.3em;
     text-align: left;
+    color: var(--black-color);
 }
 
 .orders-page__order-points {

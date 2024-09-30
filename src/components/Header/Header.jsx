@@ -30,14 +30,14 @@ const Header = ({ backLink, backText }) => {
                     <img src={close} alt='close' />
                 </button>
                 <div className='sidebar__menu'>
-                    <div className='sidebar__menu-item'>
+                    <Link className='sidebar__menu-item' to='/catalog'>
                         <Icon name='coffee' color='var(--grey-dark)' />
                         <span>Ассортимент</span>
-                    </div>
-                    <div className='sidebar__menu-item'>
+                    </Link>
+                    <Link className='sidebar__menu-item' to='/profile'>
                         <Icon name='user' color='var(--grey-dark)' />
                         <span>Профиль</span>
-                    </div>
+                    </Link>
                     <Link className='sidebar__menu-item' to='/orders'>
                         <Icon name='bag' color='var(--grey-dark)' />
                         <span>Мои заказы</span>

@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import './styles.css';
 import Header from '../../components/Header/Header';
 import { Icon } from '../../components/IconComponent';
-import { Tabs } from '../../components/Tabs/Tabs.jsx';
-import QR from '../../assets/QR.png';
 
 const order = {
     number: 671248,
     date: '1 May 2024 06:32:30 GMT',
-    pointsSpent: 0,
+    pointsSpent: 100,
     pointsReceived: 10,
     status: 'received',
     items: [
@@ -31,7 +29,7 @@ const order = {
 
 const declensedMonths = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
-const BonusesPage = () => {
+const OrdersItemPage = () => {
 
     const getDateString = (date) => {
         const dateObj = new Date(date);
@@ -54,9 +52,13 @@ const BonusesPage = () => {
         )
     }
 
+    const orderCost = useMemo(() => {
+        return order.items.reduce((acc, el) => acc + (el.cost * el.amount), 0);
+    }, [])
+
     return (
         <div className='order-item-page'>
-            <Header />
+            <Header backLink={'/orders'} backText={'Заказы'}/>
             <div className='order-item-page__order-info'>
                 <span className='order-item-page__order-id'>№{order.number}</span>
                 {getOrderStatus(order.status)}
@@ -65,12 +67,13 @@ const BonusesPage = () => {
                 </span>
             </div>
             <h3 className='order-item-page__order'>В заказе</h3>
+            <div>
             {order.items.map((el) => {
                 return (
                     <div className='order-item-page__order-item'>
                         <img src={el.image} alt={el.name} />
                         <div className='order-item-page__order-item-info'>
-                            <span>{el.name}</span>
+                            <h4>{el.name}</h4>
                             <span>{el.amount}&nbsp;шт</span>
                         </div>
                         <span className='order-item-page__order-item-cost'>
@@ -79,24 +82,35 @@ const BonusesPage = () => {
                     </div>
                 )
             })}
+            </div>
             <div className='order-item-page__pattern' />
             <div className='order-item-page__summary'>
                 <h3 className='order-item-page__summary-text'>Сумма заказа</h3>
                 <div className='order-item-page__summary-row'>
                     <span className='order-item-page__summary-row-left'>Общая сумма</span>
-                    <span className='order-item-page__summary-row-right'>Общая сумма</span>
+                    <span className='order-item-page__summary-row-right'>{orderCost}&nbsp;₽</span>
                 </div>
-                <div className='order-item-page__summary-row'>
+                {order.pointsSpent > 0 && (
+                    <div className='order-item-page__summary-row'>
                     <span className='order-item-page__summary-row-left'>Списано баллов</span>
-                    <span className='order-item-page__summary-row-right order-item-page__summary-row-right_spent'>Общая сумма</span>
-                </div>
-                <div className='order-item-page__summary-row'>
+                    <span className='order-item-page__summary-row-right order-item-page__summary-row-right_spent'>-{order.pointsSpent}&nbsp;<Icon name='points' color='var(--secondary-color)' size={14} /></span>
+                </div>)}
+                {order.pointsReceived > 0 && (
+                    <div className='order-item-page__summary-row'>
                     <span className='order-item-page__summary-row-left'>Начислено баллов</span>
-                    <span className='order-item-page__summary-row-right order-item-page__summary-row-right_received'>Общая сумма</span>
+                    <span className='order-item-page__summary-row-right order-item-page__summary-row-right_received'>+{order.pointsReceived}<Icon name='points' color='var(--primary-color)' size={14} /></span>
                 </div>
+                )}
+                <div className='order-item-page__summary-row'>
+                    <span className='order-item-page__summary-row-left order-item-page__summary-row-left_total'>Итого:</span>
+                    <span className='order-item-page__summary-row-right order-item-page__summary-row-right_total'>{orderCost - order.pointsSpent}&nbsp;₽</span>
+                </div>
+            </div>
+            <div className='order-item-page__repeat'>
+                <button className='order-item-page__repeat-button'>Повторить заказ</button>
             </div>
         </div>
     )
 }
 
-export default BonusesPage;
+export default OrdersItemPage;
