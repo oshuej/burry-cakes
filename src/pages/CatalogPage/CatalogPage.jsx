@@ -6,7 +6,7 @@ import { Tabs } from '../../components/Tabs/Tabs.jsx';
 import { CatalogItem } from '../../components/CatalogItem/CatalogItem.jsx';
 import OrdersPage from '../OrdersPage/OrdersPage.jsx';
 
-const catalogItems = {
+const baseCatalogItems = {
   cakes: {
       name: 'Торты',
       items: [
@@ -62,9 +62,28 @@ const catalogItems = {
 
 function CatalogPage() {
   const [items, setItems] = useState([]);
-  const [activeTab, setActiveTab] = useState(Object.keys(catalogItems)[0]);
+  const [activeTab, setActiveTab] = useState(null);
+
+  const [catalogItems, setCatalogItems] = useState({});
+
+  const fetchCatalog = async (searchString = '') => {
+    return fetch('https://cors-anywhere.herokuapp.com/http://88.201.128.113:8080/api/v1/mini-app/menu').then((res) => res.json()).then((res) => res);
+  }
 
   useEffect(() => {
+    console.log(catalogItems, activeTab);
+  }, [catalogItems, activeTab]);
+
+  useEffect(() => {
+    fetchCatalog().then((result) => {
+      setCatalogItems(result);
+      setActiveTab(Object.keys(result)[0]);
+    })
+      .catch(() => {
+        setCatalogItems(baseCatalogItems);
+        setActiveTab(Object.keys(baseCatalogItems)[0]);
+      });
+
     setItems([
       {
         header: 'Тест',
@@ -98,12 +117,16 @@ function CatalogPage() {
       }
     ])
   }, [])
+
+  if (!activeTab) {
+    return <div></div>
+  }
   
   return (
       <div className='catalog-page'>
         <Header />
         <SpecialItems items={items} />
-        <Tabs tabs={Object.keys(catalogItems).map((el) => ({ name: catalogItems[el].name, key: el}))} activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Tabs tabs={Object.keys(catalogItems).map((el) => ({ name: catalogItems[el].name || el, key: el}))} activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className='catalog'>
           {catalogItems[activeTab].items.map((el, index) => <CatalogItem name={el.name} image={el.image} price={el.price} />)}
