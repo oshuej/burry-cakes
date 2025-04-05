@@ -1,7 +1,14 @@
 .header {
+    width: calc(100% + 10px);
+    margin-left: -10px;
+    margin-bottom: 8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 16px 8px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background: white;
 }
 
 .header__image-container {
@@ -63,17 +70,18 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background: var(--white-background-color);
+    background: var(--gray-background-color);
 }
 
 .sidebar {
-    height: calc(100% - 72px);
+    height: 100%;
     width: 70%;
-    background: url('../../assets//Sidebar_background.png') repeat, var(--white-color);
+    background: url('../../assets/images/Sidebar_background.png') repeat, var(--white-color);
     display: flex;
     flex-direction: column;
     padding: 16px 8px 56px 8px;
     align-items: flex-start;
+    animation: 3s linear 1s slide-in;
 }
 
 .sidebar__close {

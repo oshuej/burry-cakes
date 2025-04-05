@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import Header from '../../components/Header/Header';
+import Header from '../../../components/Header/Header';
 
 const user = {
     image: 'https://www.spandidos-publications.com/resources/images/person-grey.png',

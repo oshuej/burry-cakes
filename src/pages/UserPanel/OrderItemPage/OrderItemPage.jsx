@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import './styles.css';
-import Header from '../../components/Header/Header';
-import { Icon } from '../../components/IconComponent';
+import Header from '../../../components/Header/Header';
+import { Icon } from '../../../components/IconComponent';
 
 const order = {
     number: 671248,

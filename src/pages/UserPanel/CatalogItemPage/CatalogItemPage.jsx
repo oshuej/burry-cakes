@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import Header from '../../components/Header/Header';
+import Header from '../../../components/Header/Header';
 
 const CatalogItemPage = () => {
     const item = {

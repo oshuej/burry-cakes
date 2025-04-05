@@ -1,0 +1,28 @@
+.menu-page {
+    background: url('../../../assets/images/CatalogPage_background.png') repeat;
+    min-height: 100vh;
+}
+
+.menu-page__dropdown {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-page__dropdown-item {
+    width: 100%;
+}
+
+.menu-page__catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

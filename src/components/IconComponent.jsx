@@ -1,5 +1,5 @@
 import React from 'react';
-import sprite from '../assets/sprite.svg';
+import sprite from '../assets/images/sprite.svg';
 
 export const Icon = ({ name, color = 'currentColor', size = 24 }) => {
     return (

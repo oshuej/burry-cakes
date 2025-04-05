@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
-import Header from '../../components/Header/Header';
-import { Icon } from '../../components/IconComponent';
-import { Tabs } from '../../components/Tabs/Tabs.jsx';
-import QR from '../../assets/QR.png';
+import Header from '../../../components/Header/Header';
+import { Icon } from '../../../components/IconComponent';
+import { Tabs } from '../../../components/Tabs/Tabs.jsx';
+import QR from '../../../assets/images/QR.png';
 
 const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 

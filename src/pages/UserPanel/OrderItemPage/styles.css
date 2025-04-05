@@ -109,7 +109,7 @@
 }
 
 .order-item-page__pattern {
-    background: url('../../assets/OrderItemPage_background.png');
+    background: url('../../../assets/images/OrderItemPage_background.png');
     height: 100px;
 }
 
@@ -172,11 +172,11 @@
 .order-item-page__repeat {
     padding: 12px 12px 24px;
     border-top: 1px solid var(--grey-light);
-    width: 100%;
+    width: calc(100% - 24px);
 }
 
 .order-item-page__repeat-button {
-    width: calc(100% - 24px);
+    width: 100%;
     padding: 16px;
     border-radius: 8px;
     outline: none;

@@ -1,6 +1,6 @@
 .bonuses-page__pattern {
     height: 180px;
-    background: url('../../assets/BonusesPage_background.png') no-repeat;
+    background: url('../../../assets/images/BonusesPage_background.png') no-repeat;
 }
 
 .bonuses-page__qr {
