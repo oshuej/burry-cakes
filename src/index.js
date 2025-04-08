@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { PrimeReactProvider } from 'primereact/api';
-import { Provider } from 'react-redux';
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { api, adminApi } from "./services";
+import {PrimeReactProvider} from 'primereact/api';
+import {Provider} from 'react-redux';
+import {configureStore} from '@reduxjs/toolkit'
+import {adminApi, api} from "./services";
 import 'primereact/resources/themes/saga-green/theme.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import 'primereact/resources/primereact.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {
-  RouterProvider,
-} from "react-router-dom";
+import {RouterProvider,} from "react-router-dom";
 import router from './router/Router';
 import {AdminProvider} from "./services/AdminContext";
+
+import './styles/variables.css';
+
 
 const store = configureStore({
     reducer: {
@@ -26,15 +27,15 @@ const store = configureStore({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <PrimeReactProvider>
-              <AdminProvider>
-                  <RouterProvider router={router} />
-              </AdminProvider>
-          </PrimeReactProvider>
-      </Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+            <PrimeReactProvider>
+                <AdminProvider>
+                    <RouterProvider router={router}/>
+                </AdminProvider>
+            </PrimeReactProvider>
+        </Provider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
