@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, redirect } from "react-router-dom";
+import { getRuntimeConfig } from "../config/runtimeConfig";
 import CatalogPage from "../pages/UserPanel/CatalogPage/CatalogPage.jsx";
 import CatalogItemPage from "../pages/UserPanel/CatalogItemPage/CatalogItemPage.jsx";
 import OrdersPage from "../pages/UserPanel/OrdersPage/OrdersPage";
@@ -9,7 +10,9 @@ import ProfilePage from "../pages/UserPanel/ProfilePage/ProfilePage";
 import MenuPage from "../pages/AdminPanel/MenuPage/MenuPage.jsx";
 import MenuDetailedPage from "../pages/AdminPanel/MenuDetailedPage/MenuDetailedPage";
 
-  const router = createBrowserRouter([
+const { appBaseUrl } = getRuntimeConfig();
+
+const router = createBrowserRouter([
     {
         path: '/',
         loader: () => { return redirect('/catalog') },
@@ -51,7 +54,7 @@ import MenuDetailedPage from "../pages/AdminPanel/MenuDetailedPage/MenuDetailedP
       path: '/admin/catalog/edit/:id',
       element: <MenuDetailedPage />
     }
-  ]);
+], { basename: appBaseUrl });
 
-  export default router;
+export default router;
 

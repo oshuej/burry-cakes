@@ -1,0 +1,15 @@
+services:
+  burry-cakes:
+    build:
+      context: .
+    image: "${BURRY_CAKES_IMAGE:-burry-cakes:local}"
+    ports:
+      - "${APP_HTTP_PORT:-8080}:80"
+    env_file:
+      - .env.local
+    environment:
+      APP_API_BASE_URL: "${APP_API_BASE_URL:-https://www.burrycakes.ru/api/v1/mini-app}"
+      APP_ADMIN_API_BASE_URL: "${APP_ADMIN_API_BASE_URL:-https://www.burrycakes.ru/api/v1/mini-app/admin/panel}"
+      APP_BASE_URL: "${APP_BASE_URL:-/}"
+      NGINX_SERVER_NAME: "${NGINX_SERVER_NAME:-localhost}"
+      NGINX_LISTEN_PORT: "${NGINX_LISTEN_PORT:-80}"

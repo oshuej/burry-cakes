@@ -1,0 +1,20 @@
+server {
+    listen ${NGINX_LISTEN_PORT};
+    server_name ${NGINX_SERVER_NAME};
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location = /runtime-config.js {
+        add_header Cache-Control "no-store";
+    }
+
+    location / {
+        try_files $$uri $$uri/ /index.html;
+    }
+
+    location /static/ {
+        expires 1h;
+        add_header Cache-Control "public, max-age=3600";
+    }
+}
